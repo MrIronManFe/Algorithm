@@ -14,4 +14,4 @@ var numWays = function(n) {
     return res
 };
 
-console.log(numWays(78))
+// console.log(numWays(78))
