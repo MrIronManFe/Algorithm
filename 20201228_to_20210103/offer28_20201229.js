@@ -41,7 +41,7 @@
  * @param {TreeNode} root
  * @return {boolean}
  */
-var isSymmetric = function (root) {
+var isSymmetric = function(root) {
     function isMirror(r1, r2) {
         //如果都为null 对称
         if (!r1 && !r2) {
