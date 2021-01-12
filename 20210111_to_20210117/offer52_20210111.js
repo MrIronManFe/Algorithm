@@ -10,12 +10,12 @@
  */
 
 /**
-* Definition for singly-linked list.
-* function ListNode(val) {
-*     this.val = val;
-*     this.next = null;
-* }
-*/
+ * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
+ */
 
 /**
  * @param {ListNode} headA
@@ -30,11 +30,12 @@ nodeA = l1+c
 nodeB = l2+c
 l1+c+l2 = l2+c+l1
 */
-var getIntersectionNode = function (headA, headB) {
-    let nodeA = headA, nodeB = headB
+var getIntersectionNode = function(headA, headB) {
+    let nodeA = headA,
+        nodeB = headB
     while (nodeA !== nodeB) {
         nodeA = (nodeA) ? nodeA.next : headB
         nodeB = (nodeB) ? nodeB.next : headA
     }
     return nodeA
-}; 
+};
