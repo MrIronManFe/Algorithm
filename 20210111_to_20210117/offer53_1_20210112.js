@@ -18,7 +18,7 @@
  * @param {number} target
  * @return {number}
  */
-var search = function(nums, target) {
+var search = function (nums, target) {
     // let left = nums.indexOf(target)
     // let right = nums.lastIndexOf(target)
     // return right - left + 1
@@ -27,7 +27,7 @@ var search = function(nums, target) {
             j = nums.length - 1
         while (i <= j) {
             let m = Math.floor((i + j) / 2);
-            (nums[m] <= target) ? i = m + 1: j = m - 1
+            (nums[m] <= target) ? i = m + 1 : j = m - 1
         }
         return i
     }
