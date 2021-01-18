@@ -51,7 +51,15 @@ var isBalanced = function(root) {
     if (Math.abs(right - left) > 1) return false
     return isBalanced(root.left) && isBalanced(root.right)
     */
+    //    后序遍历,左->右->根
 
-    // bfs
-
+    function recur(root) {
+        if (!root) return 0
+        let left = recur(root.left)
+        if (left == -1) return -1
+        let right = recur(root.right)
+        if (right == -1) return -1
+        return (Math.abs(left - right) <= 1) ? (Math.max(left, right) + 1) : -1
+    }
+    return recur(root) !== -1
 };
