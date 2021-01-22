@@ -34,14 +34,14 @@ var reverseLeftWords = function(s, n) {
     // }
     // return res.join('')
     // 遍历字符串
-    let res = ''
-    for (let index = n; index < s.length; index++) {
-        res += s[index]
-    }
-    for (let index = 0; index < n; index++) {
-        res += s[index]
-    }
-    return res
+    // let res = ''
+    // for (let index = n; index < s.length; index++) {
+    //     res += s[index]
+    // }
+    // for (let index = 0; index < n; index++) {
+    //     res += s[index]
+    // }
+    // return res
 };
 
 console.log(reverseLeftWords("abcdefg", 2))
