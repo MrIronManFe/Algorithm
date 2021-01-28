@@ -16,10 +16,10 @@
  * @param {number[]} nums
  * @return {boolean}
  */
-var isStraight = function (nums) {
+var isStraight = function(nums) {
     // 先将 nums 从小到大进行排序，再把数组中的 0 去掉
     nums = nums.sort((a, b) => a - b).filter(item => item !== 0)
-    // 找出数组中的最大数与最小数，分别在数组的头和尾，判断它们的差是否超过 4，超过则说明不是连续的
+        // 找出数组中的最大数与最小数，分别在数组的头和尾，判断它们的差是否超过 4，超过则说明不是连续的
     if (nums[nums.length - 1] - nums[0] > 4) return false
 
     // 遍历数组找出是否有重复的数字，因为涉及到 i + 1，所以遍历长度是 数组长度-1
