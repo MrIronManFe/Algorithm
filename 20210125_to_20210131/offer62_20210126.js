@@ -34,7 +34,7 @@ f(1)=0，因为1个人时只有一个编号0。
  * @param {number} m
  * @return {number}
  */
-var lastRemaining = function(n, m) {
+var lastRemaining = function (n, m) {
     let ans = 0;
     for (let i = 2; i <= n; i++) {
         ans = (ans + m) % i;
