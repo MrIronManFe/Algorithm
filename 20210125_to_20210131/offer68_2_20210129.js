@@ -43,3 +43,5 @@ var lowestCommonAncestor = function(root, p, q) {
     if (left && !right) return left
     if (!left && right) return right
 }
+
+// https://leetcode-cn.com/problems/er-cha-shu-de-zui-jin-gong-gong-zu-xian-lcof/solution/chao-jian-dan-di-gui-pythonjavascript-by-azl397985/
