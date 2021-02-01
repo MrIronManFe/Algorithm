@@ -44,15 +44,21 @@ B是A的子结构， 即A中有出现和B相同的结构和节点值。
  * @return {boolean}
  */
 var isSubStructure = function(A, B) {
+    // 题目约定：约定空树不是任意一个树的子结构
     if (!A || !B) {
         return false
     }
+    // 涵盖根节点，B在A的左子树，B在A的右子树
     return isSub(A, B) || isSubStructure(A.left, B) || isSubStructure(A.right, B)
 };
 
 function isSub(A, B) {
-    if (!B) return true
-    if (!A || A.val !== B.val) return false
+    // B树遍历完了，说明B是A的子结构
+    if (!B) return true;
+    // A遍历完了，但是B还没有遍历完，那么B肯定不是A的子结构。
+    // 当让值不一样就肯定是不一样了啊
+    if (!A || A.val !== B.val) return false;
+    // 然后再遍历左子树和右子树
     return isSub(A.left, B.left) && isSub(A.right, B.right)
 }
 
