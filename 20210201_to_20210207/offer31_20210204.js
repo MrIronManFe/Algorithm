@@ -25,15 +25,15 @@ pushed 是 popped 的排列。
  * @param {number[]} popped
  * @return {boolean}
  */
-var validateStackSequences = function(pushed, popped) {
+var validateStackSequences = function (pushed, popped) {
     let stack = [],
         point = 0
     for (let index = 0; index < pushed.length; index++) {
         let element = pushed[index]
-            // 入栈
+        // 入栈
         stack.push(element)
         console.log(stack)
-            // 循环出栈
+        // 循环出栈
         while (stack.length > 0 && stack[stack.length - 1] === popped[point]) {
             // console.log(popped[point])
             // console.log(stack[stack.length - 1])
